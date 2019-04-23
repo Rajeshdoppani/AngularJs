@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" ng-repeat="product in products">
+            <img style="width:100%" src="">
+            <p>{{product.name}}</p>
+            <p>{{product.price | currency}}</p>
+            <button class="btn btn-success" ng-click="addItem(product)">Buy</button>
+        </div>
+    </div>
+    <div ng-show="cart.length!==0">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="c in cart">
+                <p>{{c.name}}</p>
+                <p>{{c.count}}</p>
+                <p>{{c.price*c.count | currency}}</p>
+                <button class="btn btn-danger" ng-click="removeItem(c)">Remove</button>
+            </li>
+        </ul>
+    </div>
+    <br>
+    Total:<p>{{total | currency}}</p>
+    <button class="btn btn-info" ng-disabled="cart.length==0" ng-click="proceed()">Proceed</button>
+</div>

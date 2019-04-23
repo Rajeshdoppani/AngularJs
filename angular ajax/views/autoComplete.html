@@ -1,0 +1,9 @@
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label>Product List:</label>
+            <input type="text" class="form-control" ng-model="selected"
+                uib-typeahead="product.productName for product in products | filter:$viewValue">
+        </div>
+    </form>
+</div>

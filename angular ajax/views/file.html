@@ -1,0 +1,16 @@
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default" ng-repeat="product in products">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" ng-click="foo()">
+                      {{product.name}}
+                </a>
+            </h4>
+        </div>
+        <div class="panel-collapse collapse in">
+            <div class="panel-body">
+                 {{product.price}}
+            </div>
+        </div>  
+    </div>
+</div>

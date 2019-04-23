@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3" ng-repeat="product in products">
+            <img style="width:100%" src="http://www.onesevenhome.com{{product.imageURL}}">
+            <p>{{product.productName}}</p>
+        </div>
+    </div>
+</div>
+<button type="button" class="goToTop" ng-click="backToTop()">Back to top</button>

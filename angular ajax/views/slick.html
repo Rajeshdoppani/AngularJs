@@ -1,0 +1,16 @@
+<section>
+    <div class="container">
+        <h2>Carousel</h2>
+        <slick class="slider" settings="slickConfig" ng-if="slickConfigLoaded" dots="true">
+            <div ng-repeat="product in products">
+               <img src="http://www.onesevenhome.com{{product.imageURL}}" style="width:200px;">
+            </div>
+        </slick>
+        <div>
+            <button class="btn btn-info" ng-click="slickConfig.method.slickPrev()">Prev()</button>
+            <button class="btn btn-info" ng-click="slickConfig.method.slickNext()">Next()</button>
+            <button class="btn btn-info" ng-click='slickConfig.method.slickPlay()'>Play()</button>
+            <button class="btn btn-info" ng-click='slickConfig.method.slickPause()'>Pause()</button>
+        </div>
+    </div>
+</section>

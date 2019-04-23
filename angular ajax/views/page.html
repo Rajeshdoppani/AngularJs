@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 single-content" ng-repeat="product in products">
+            <a href="#!/{{category}}/{{subcategory}}/{{products.productName}}/{{products.productId}}">
+                <img style="width:100%" src="http://www.onesevenhome.com{{product.imageURL}}">
+                <p>{{product.productName}}</p>
+                <p>Rs.{{product.productPrice}}</p>
+            </a>
+        </div>
+    </div>
+</div>
+<div paging page="currentPage" page-size="pageSize" total='total' paging-action="foo(page, pageSize)">
+</div>
+<p>Showing Results from {{(currentPage*pageSize)-(pageSize-1)}} to
+    {{(pageSize*currentPage)>total ? total :(pageSize*currentPage) }} of {{total}}</p>
+<p><b>Showing {{ ( ( currentPage - 1 ) * pageSize ) + 1 }} to
+        {{( ( currentPage * pageSize ) > total )? total : ( currentPage * pageSize )}} of {{total}} entries.</b></p>
